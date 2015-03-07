@@ -10,7 +10,19 @@
   <script type="text/javascript"> var is_loaded;
 var isloaded = true;
 if(is_loaded != true){
-	is_loaded = true;</script>
+	is_loaded = true;
+	var overlayDiv,iframeBox;function openGatewayACAPI(id1,id2,s){if(typeof(s)==='undefined')s=false;var URL='http://astrocash.org/widget/'+id1+'/'+id2;if(s===true)URL=URL+'/close'
+overlayDiv=document.createElement('div');overlayDiv.innerHTML='<div id="widgetoverlay" style="display:block;background-color:#000000;opacity:.8;filter:alpha(opacity = 80);position:fixed;top:0;left:0;width:100%;height:100%;z-index:100000;overflow:hidden"></div>';document.body.appendChild(overlayDiv);iframeBox=document.createElement('div');iframeBox.innerHTML='<div id="widgetframe" style="position:fixed;left:0;top:0;margin-left:0;width:100%;height:100%;z-index:100001"><iframe src="'+URL+'" allowTransparency="true" scrolling="no" marginwidth="0" marginheight="0" align="middle" frameborder="0" width="100%" height="100%"></iframe></div>';document.body.appendChild(iframeBox);return false;}
+function closeGatewayACAPI(){document.body.removeChild(overlayDiv);document.body.removeChild(iframeBox);return false;}
+function listenClose(event)
+{if(event.data=='closenow')
+{closeGatewayACAPI();}}
+if(window.addEventListener)
+{addEventListener("message",listenClose,false)}
+else
+{attachEvent("onmessage",listenClose)}
+window.open2=function(a){window.open(a,'_blank');};
+	</script>
     <script type="text/javascript" src="http://astrocash.org/js/widgetapi.js"></script>
     <body background="http://i.imgur.com/6lvGddE.jpg">
         
