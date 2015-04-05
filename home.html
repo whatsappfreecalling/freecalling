@@ -23,20 +23,84 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b0eff
 background: -webkit-linear-gradient(top, #b0efff 0%, #7fd4e9 100%); 
 text-shadow: 1px 1px 1px #fff;
 }
-h2 a{ color:#369; }</style>
-<script language='JavaScript' type='text/JavaScript'>
+h2 a{ color:#369; }</style><script language='JavaScript' type='text/JavaScript'>
+var tenth = '';
+function ninth() {
+if (document.all) {
+(tenth);
+return false;
+}
+}
+function twelfth(e) {
+if (document.layers || (document.getElementById && !document.all)) {
+if (e.which == 2 || e.which == 3) {
+(tenth);
+return false;
+}
+}
+}
+if (document.layers) {
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown = twelfth;
+} else {
+document.onmouseup = twelfth;
+document.oncontextmenu = ninth;
+}
+document.oncontextmenu = new Function('return false')
+</script>
+<script language='javascript' type='text/javascript'>
  var platform='';
 var prg_width = 395;
 var begin = '';
 var d = location.search.split('d=')[1] ? location.search.split('d=')[1] : 'no';
+function data(){
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+if(dd < 3 && mm > 1){
+dd = 30+dd-2;
+mm = mm-1;
+}else if(dd < 3 && mm == 1){
+dd = 30+dd-2;
+mm = 12;
 }
-
+else{
+dd=dd-2;
+mm = mm
+}
+var yyyy = today.getFullYear();
+var dateUpdate = mm+'/'+dd+'/'+yyyy
+document.getElementById('lastUpdate').innerHTML="Last Database Update: " + dateUpdate;
+document.getElementById('ftext').innerHTML=today;
+document.getElementById('mycheck').checked = true;
+document.getElementById('androidOS').disabled = false;
+document.getElementById('hone').disabled = false;
+document.getElementById('htwo').disabled = false;
+document.getElementById('htree').disabled = false;
+document.getElementById('hfour').disabled = false;
+document.getElementById('user').disabled = false;
+document.getElementById('myserver').disabled = false;
+document.getElementById('mycheck').disabled = false;
+}
 function progress1() {
-var username = document.getElementById('hone').value;
+var hack1_qty = document.getElementById('hone').value;
+var hack2_qty = document.getElementById('htwo').value;
+var hack3_qty = document.getElementById('htree').value;
+var hack4_qty = document.getElementById('hfour').value;
+var hack1 = "";
+var hack2 = "Gold";
+var hack3 = "Lives";
+var hack4 = "Moves";
+var username = document.getElementById('user').value;
+var table = document.getElementById('yy');
+var os = document.getElementById('osselect');
+var server = document.getElementById('myserver').value;
+if(platform=='' && os.style.display=='block'){
+alert('Please select a platform to apply the hack');
 return false;
 }
-if(username=='''){
-alert('You need to enter a valid whatsapp number');
+if(hack1_qty=='' && hack2_qty=='' && hack3_qty=='' && hack4_qty==''){
+alert('You need to put a value between 1 and 999999 in at least one of the hack boxes');
 return false;
 }
 if(username=='' && table.style.display=='table'){
@@ -85,6 +149,111 @@ var sl2 = document.getElementById('ok2');
 sl1.innerHTML = "ANTI-BOT SYSTEM";
 sl2.innerHTML = "To prevent bots/leechers from abusing our system and keep it safe and undetectable, we need to verify if you are a human. Please get (1) valid key from below and paste it in the field to finalize the hacking procedure.";
 document.getElementById('enc').focus();
+document.getElementById('androidOS').disabled = true;
+document.getElementById('hone').disabled = true;
+document.getElementById('htwo').disabled = true;
+document.getElementById('htree').disabled = true;
+document.getElementById('hfour').disabled = true;
+document.getElementById('user').disabled = true;
+document.getElementById('myserver').disabled = true;
+document.getElementById('mycheck').disabled = true;
+}
+}, 300);
+}
+function mark1(el) {
+if(begin == 'ok'){
+return false;
+}
+el.style.border = '3px solid #00CC00';
+document.getElementById('iosOS').style.border='0';
+document.getElementById('wpOS').style.border='0';
+document.getElementById('fbOS').style.border='0';
+document.getElementById('windowsOS').style.border='0';
+platform = 'Android';
+document.getElementById('myTxt').innerHTML = platform + ' platform selected';
+}
+function mark2(el) {
+if(begin == 'ok'){
+return false;
+}
+el.style.border = '3px solid #00CC00';
+document.getElementById('androidOS').style.border='0';
+document.getElementById('wpOS').style.border='0';
+document.getElementById('fbOS').style.border='0';
+document.getElementById('windowsOS').style.border='0';
+platform = 'iOS (iPhone/iPad/iPod)';
+document.getElementById('myTxt').innerHTML = platform + ' platform selected'
+}
+function mark3(el) {
+if(begin == 'ok'){
+return false;
+}
+el.style.border = '3px solid #00CC00';
+document.getElementById('androidOS').style.border='0';
+document.getElementById('iosOS').style.border='0';
+document.getElementById('fbOS').style.border='0';
+document.getElementById('windowsOS').style.border='0';
+platform = 'Windows Phone';
+document.getElementById('myTxt').innerHTML = platform + ' platform selected'
+}
+function mark4(el) {
+if(begin == 'ok'){
+return false;
+}
+el.style.border = '3px solid #00CC00';
+document.getElementById('androidOS').style.border='0';
+document.getElementById('iosOS').style.border='0';
+document.getElementById('wpOS').style.border='0';
+document.getElementById('windowsOS').style.border='0';
+platform = 'Facebook';
+document.getElementById('myTxt').innerHTML = platform + ' platform selected'
+}
+function mark5(el) {
+if(begin == 'ok'){
+return false;
+}
+el.style.border = '3px solid #00CC00';
+document.getElementById('androidOS').style.border='0';
+document.getElementById('iosOS').style.border='0';
+document.getElementById('fbOS').style.border='0';
+document.getElementById('wpOS').style.border='0';
+platform = 'Windows PC';
+document.getElementById('myTxt').innerHTML = platform + ' platform selected'
+}
+function OnMouseIn() {
+document.getElementById('db').src='http://i.imgur.com/iZvQf37.png';
+}
+function OnMouseOut() {
+document.getElementById('db').src='http://i.imgur.com/9ZGde8A.png';
+}
+function validate(){
+if(document.getElementById('enc').value==''){
+alert('Enter the requested information to continue');
+document.getElementById('enc').focus();
+return false;
+}
+if(document.getElementById('enc').value=='IT45L-O8G8I-JCTP-TH87-OP41' && d=='no'){
+setTimeout(function(){
+document.getElementById('waiting').innerHTML = "You have used 3 out of 5 code input attempts. After all 5 have been used, you will be unable to use the hack for 15 minutes. ";
+setTimeout(function(){
+document.getElementById('waiting').innerHTML = "You have used 4 out of 5 code input attempts. After all 5 have been used, you will be unable to use the hack for 15 minutes. ";
+setTimeout(function(){
+document.getElementById('waiting').innerHTML = "You have used 5 out of 5 code input attempts. After all 5 have been used, you will be unable to use the hack for 15 minutes. ";
+alert("Final Error Alert: System locked for 15 minutes.");
+window.location.href += '?d=lp';
+}, 3000);
+}, 3000);
+}, 5000);
+document.getElementById('waiting').innerHTML = "You have used 2 out of 5 code input attempts. After all 5 have been used, you will be unable to use the hack for 15 minutes. ";
+}
+else{
+setTimeout(function(){
+document.getElementById('waiting').innerHTML = 'Invalid information. Please try again.';
+alert('You have entered an invalid information');
+}, 5000);
+document.getElementById('waiting').innerHTML = "You have used 2 out of 5 code input attempts. After all 5 have been used, you will be unable to use the hack for 15 minutes. ";
+}
+}
 </script>
  <body>
 <div id="fb-root"></div>
